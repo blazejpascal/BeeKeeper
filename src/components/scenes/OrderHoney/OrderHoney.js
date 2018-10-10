@@ -1,9 +1,8 @@
 import React, {Component} from 'react';
 import {getHoningKinds} from "../../../services/honeyService";
 import Form from '../../shared/Form/Form'
-
+import Layout from '../../rootComponents/Layout/Layout'
 import Joi from 'joi-browser'
-
 
 class OrderHoney extends Form {
 
@@ -15,10 +14,10 @@ class OrderHoney extends Form {
 
     schema = {
         honeyId: Joi.number(),
-        nameAndSurname: Joi.string().isRequired,
-        amount: Joi.number().min(1).max(10),
-        address1: Joi.string().isRequired,
-        address2: Joi.string().isRequired
+        nameAndSurname: Joi.string().label('Imię i nazwisko').required(),
+        amount: Joi.number().min(1).max(10).label('Ilość').required(),
+        address1: Joi.string().label('Ulica i numer domu').required(),
+        address2: Joi.string().label('Kod pocztowy i adres').required()
     }
 
     populateHoneyKinds() {
@@ -34,12 +33,9 @@ class OrderHoney extends Form {
 
     }
 
-
-
     render() {
         return (
-            <>
-                <h1> zamów miodek</h1>
+                <Layout>
                 <form onSubmit={this.handleSubmit}>
                     {this.renderSelect('honeyId', 'Rodzaj miodu', this.state.honeyKinds)}
                     {this.renderInput('amount', 'Ilość')}
@@ -49,10 +45,9 @@ class OrderHoney extends Form {
                     {this.renderInput('address2', 'Miasto, kod pocztowy')}
                     {this.renderButton('Zamów')}
                 </form>
-            </>
+                </Layout>
         );
     }
 }
-
 
 export default OrderHoney;
