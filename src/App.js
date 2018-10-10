@@ -3,8 +3,10 @@ import './App.css';
 
 
 import { Route, Switch, Redirect } from 'react-router-dom'
-import OrderHoney from "./components/scenes/OrderHoney/OrderHoney";
+
 import AboutUs from './components/scenes/AboutUs/AboutUs'
+import BeeCamera from "./components/scenes/BeeCamera/BeeCamera";
+import Contact from "./components/scenes/Contact/Contact";
 
 class App extends Component {
   render() {
@@ -12,7 +14,8 @@ class App extends Component {
       <div className="App">
           <Switch>
               <Route path="/aboutUs" component={AboutUs}/>
-              <Route path="/orderHoney" component={OrderHoney}/>
+              <Route path="/beeCamera" component={BeeCamera}/>
+              <Route path="/contacts" component={Contact}/>
               <Redirect from="/" exact to="/aboutUs"/>
           </Switch>
       </div>

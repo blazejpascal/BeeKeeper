@@ -11,7 +11,7 @@ const Navbar = () => (
                 <Link to="/">O nas </Link>
             </li>
             <li  className="navbar__link">
-                <Link to="/skiCams">Kamerka przy pasiece </Link>
+                <Link to="/beeCamera">Kamerka przy pasiece </Link>
             </li>
             <li className="navbar__link">
                 <Link to="/contacts">Kontakt </Link>
