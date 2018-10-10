@@ -7,7 +7,7 @@ import Joi from 'joi-browser'
 class OrderHoney extends Form {
 
     state = {
-        data: {nameAndSurname: '', honeyId:'', amount: '', address1: "", address2: ""},
+        data: {nameAndSurname: '', honeyId: '', amount: '', address1: "", address2: ""},
         errors: {},
         honeyKinds: [],
     }
@@ -35,7 +35,8 @@ class OrderHoney extends Form {
 
     render() {
         return (
-                <Layout>
+            <Layout>
+                <h1>Zamów miód</h1>
                 <form onSubmit={this.handleSubmit}>
                     {this.renderSelect('honeyId', 'Rodzaj miodu', this.state.honeyKinds)}
                     {this.renderInput('amount', 'Ilość')}
@@ -45,7 +46,7 @@ class OrderHoney extends Form {
                     {this.renderInput('address2', 'Miasto, kod pocztowy')}
                     {this.renderButton('Zamów')}
                 </form>
-                </Layout>
+            </Layout>
         );
     }
 }

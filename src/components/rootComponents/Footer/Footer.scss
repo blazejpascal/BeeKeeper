@@ -1,0 +1,19 @@
+.footer {
+  color: #a7a7a7;
+  min-height: 7vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__text {
+
+    &:before {
+      content: '';
+      border: 1px solid #484848;
+      margin-bottom: 40px;
+      display: block;
+      width: 300px;
+    }
+
+  }
+}

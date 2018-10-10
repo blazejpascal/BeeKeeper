@@ -10,7 +10,7 @@ class MyComponent extends Component {
         return (
             <div className="layout">
                 <Header />
-                <main className='container'>
+                <main className='layout__content'>
                     {this.props.children}
                 </main>
                 <Footer/>

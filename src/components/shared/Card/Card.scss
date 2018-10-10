@@ -1,0 +1,41 @@
+.square {
+  display: grid;
+  grid-template-rows: 60% 40%;
+  width: 400px;
+  height: 440px;
+  border: 1px solid #e6e6e6;
+  margin: 40px 20px 20px 20px;
+  box-sizing: border-box;
+
+  &__cover {
+
+  }
+
+  &__picture {
+    object-fit: cover
+
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #545454;
+    padding: 0 24px;
+    font-size: 18px;
+    background-color: #fff;
+    font-weight: bold;
+    border-bottom: 1px solid #e6e6e6;
+
+
+    &--smaller {
+      margin-top: 20px;
+      font-size: 14px;
+      font-weight: normal;
+    }
+  }
+
+  &:hover {
+    box-shadow: 0 2px 5px rgba(0,0,0,.1);
+  }
+}

@@ -1,6 +1,17 @@
 .layout {
   display: grid;
-  height: 100vh;
-  grid-template-rows: 15% 70% 15%;
+  min-height: 100vh;
+  grid-template-rows: 20% 68% 12%;
+  margin: 0 10%;
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+   background-color: #f8f8f8;
+
+  }
+
 
 }

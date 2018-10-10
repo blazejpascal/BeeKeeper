@@ -1,0 +1,10 @@
+.header {
+  background: #ffffff url("../../assets/edited/header.png") no-repeat  ;
+  background-size: cover;
+
+  display: grid;
+  grid-template-rows: 80% 20%;
+
+  min-height: 250px;
+
+}
