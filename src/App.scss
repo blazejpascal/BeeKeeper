@@ -1,0 +1,14 @@
+.App {
+  text-align: center;
+  background-color: #282828;
+}
+
+a {
+  color: #545454;
+
+    &:hover, &:link, &:visited, &:active {
+       text-decoration: none;
+     }
+}
+
+

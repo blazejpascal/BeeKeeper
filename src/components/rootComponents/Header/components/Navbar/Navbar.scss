@@ -1,8 +1,5 @@
 .navbar {
-
   padding-top: 5px;
-
-
 
   &__list {
     display: flex;
@@ -16,14 +13,7 @@
     border-bottom: 2px solid transparent;
     font-weight: medium;
 
-    a {
-      color: #545454 !important;
 
-
-      &:hover, &:link, &:visited, &:active {
-      text-decoration: none;
-      }
-    }
 
     &:hover {
       color: #ef6716;

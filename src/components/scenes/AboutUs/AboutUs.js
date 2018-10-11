@@ -5,12 +5,14 @@ import CardsWithData from "../../shared/CardsWithData/CardsWithData";
 const description = [
     {
         id: 1,
+        to: '/beeKeeper',
         url: require('../../assets/edited/pasieka.png'),
         title: "Pasieka Izerska",
         description: "Zapraszamy do zapoznania się z pasieką, oraz zakupu miodu."
     },
     {
         id: 2,
+        to: '/artShop',
         url: require('../../assets/edited/woodArt.png'),
         title: "Rękodzieło",
         description: "Drewniane, ręcznie wykonane przedmioty codziennego użytku."
@@ -18,6 +20,7 @@ const description = [
     {
         id: 3,
         url: require('../../assets/edited/meble.png'),
+        to: '/furniture',
         title: "Meble i Inne",
         description: "Przykłady rzeczy wykonanych na zamówienie."
     },

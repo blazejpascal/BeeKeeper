@@ -4,15 +4,14 @@
   width: 400px;
   height: 440px;
   border: 1px solid #e6e6e6;
-  margin: 40px 20px 20px 20px;
+  margin: 40px 20px;
   box-sizing: border-box;
 
   &__cover {
-
+    overflow:hidden;
   }
 
   &__picture {
-    object-fit: cover
 
   }
 

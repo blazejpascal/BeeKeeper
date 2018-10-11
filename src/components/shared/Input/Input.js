@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './Input.scss'
+
 const Input = ({ name, label, error, ...rest}) => {
     return (
         <div className="form-group">
@@ -8,7 +10,7 @@ const Input = ({ name, label, error, ...rest}) => {
                 type="text"
                 name={name}
                 id={name}
-                className="form-control"
+                className="textInput"
             />
             {error && <div className="alert alert-danger">{error}</div>}
         </div>
