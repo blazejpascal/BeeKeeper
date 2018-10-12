@@ -2,9 +2,9 @@ import React from 'react';
 import './Card.scss'
 
 const Card = props => {
-    const { url, title, description  } = props
+    const { url, title, description, additionalStyling } = props
     return(
-    <div className="square">
+    <div className={`square ${additionalStyling}`}>
         <div className="square__cover">
             <img src={ url }  alt="random" className="square__picture" />
         </div>

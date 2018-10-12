@@ -15,7 +15,7 @@ const Select = ({name, label, options, error, ...rest}) => {
                         </option>
                     ))}
             </select>
-            {error && <div className="alert alert-danger"> {error}</div>}
+            {error && <div className="alert alert__danger"> {error}</div>}
         </div>
     );
 };

@@ -12,7 +12,7 @@ const Input = ({ name, label, error, ...rest}) => {
                 id={name}
                 className="textInput"
             />
-            {error && <div className="alert alert-danger">{error}</div>}
+            {error && <div className="alert alert__danger">{error}</div>}
         </div>
     );
 };

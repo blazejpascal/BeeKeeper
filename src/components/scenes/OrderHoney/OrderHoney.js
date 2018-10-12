@@ -21,9 +21,7 @@ class OrderHoney extends Form {
         honeyId: Joi.number(),
         sizeId: Joi.number(),
         amount: Joi.number().min(1).max(10).label('Ilość').required(),
-        // nameAndSurname: Joi.string().label('Imię i nazwisko').required(),
-        // address1: Joi.string().label('Ulica i numer domu').required(),
-        // address2: Joi.string().label('Kod pocztowy i adres').required()
+
     }
 
     populateHoneyKinds() {
@@ -41,12 +39,15 @@ class OrderHoney extends Form {
 
     doSubmit = () => {
         console.log('submitted')
+        this.setState({
+            isBasketEmpty: false
+        })
 
     }
 
     render() {
         const chosenHoney = (this.state.data.honeyId) ? this.state.honeyKinds[this.state.data.honeyId] : defaultHoney;
-
+        
         return (
             <Layout>
                 <div className="orderHoney">
@@ -59,12 +60,12 @@ class OrderHoney extends Form {
                             {this.renderSelect('sizeId', 'Wielkośc', this.state.sizeKinds)}
                             {this.renderInput('amount', 'Ilość')}
                             {this.renderButton('Dodaj')}
-
-                            {/*{this.renderInput('nameAndSurname', 'Imię i nazwisko')}*/}
-                            {/*{this.renderInput('address1', 'Ulica, numer domu/mieszkania')}*/}
-                            {/*{this.renderInput('address2', 'Miasto, kod pocztowy')}*/}
-                            {/*{this.renderButton('Zamów')}*/}
                         </form>
+                        {
+                            this.state.isBasketEmpty ?
+                                null :
+                                <button> Złóż zamowienie </button>
+                        }
                     </div>
                 </div>
             </Layout>

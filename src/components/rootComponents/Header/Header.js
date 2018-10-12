@@ -7,7 +7,7 @@ const Header = () => {
     return (
         <>
             <div className="header">
-                <span className="header__logo">logo</span>
+                <img src={require('../../assets/edited/Logo.png')} alt="Logo" className="header__logo" />
                 <Navbar/>
             </div>
 

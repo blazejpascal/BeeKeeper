@@ -1,13 +1,41 @@
-import React from 'react';
+import React, {Component} from 'react';
 
 import Layout from '../../rootComponents/Layout/Layout'
+import CardsWithData from '../../shared/CardsWithData/CardsWithData'
 
-const ArtShop = () => {
-    return (
-        <Layout>
-            <h1>ArtShop</h1>
-        </Layout>
-    );
-};
+import {getArtCrafts} from "../../../services/artShopService";
+
+import './ArtShop.scss'
+
+class ArtShop extends Component {
+    state = {
+        artCrafts: []
+    }
+
+    populateArtCrafts = () => {
+       this.setState({
+           artCrafts: getArtCrafts()
+       })
+    }
+
+
+    componentDidMount() {
+        this.populateArtCrafts()
+    }
+
+
+    render() {
+        const { artCrafts } = this.state
+        console.log(artCrafts)
+        return (
+            <Layout>
+                <CardsWithData data={artCrafts} additionalStyling="artShop__square" />
+
+            </Layout>
+        );
+    }
+}
+
 
 export default ArtShop;
+

@@ -7,17 +7,17 @@ import Card from '../Card/Card'
 
 const CardsWithData = (props) => {
     const data = props.data
-    console.log(data)
+    const {additionalStyling} = props
     return (
         <div className="cards-with-data">
             {
-            data.map(card => (
-                <Link key={card.id} to={card.to}>
-                <div key={card.id} className='card-container'>
-                  <Card {...card}  />
-                </div>
-                </Link>
-            ))
+                data.map(card => (
+                    <Link key={card.id} to={card.to}>
+                        <div key={card.id} className='card-container'>
+                            <Card {...card} additionalStyling={additionalStyling}  />
+                        </div>
+                    </Link>
+                ))
             }
         </div>
     )

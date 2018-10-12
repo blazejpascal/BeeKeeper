@@ -6,6 +6,7 @@ const BeeCamera = () => {
     return (
         <Layout>
             <h1>Kamerka przy ulach wkrótce dostępna</h1>
+
         </Layout>
     );
 };
