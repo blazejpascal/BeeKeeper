@@ -10,7 +10,7 @@ import './OrderHoney.scss'
 class OrderHoney extends Form {
 
     state = {
-        data: {nameAndSurname: '', honeyId: '', sizeId: '', amount: '', address1: "", address2: ""},
+        data: {honeyId: '', sizeId: '', amount: ''},
         errors: {},
         honeyKinds: [],
         sizeKinds: [],
@@ -20,10 +20,10 @@ class OrderHoney extends Form {
     schema = {
         honeyId: Joi.number(),
         sizeId: Joi.number(),
-        nameAndSurname: Joi.string().label('Imię i nazwisko').required(),
         amount: Joi.number().min(1).max(10).label('Ilość').required(),
-        address1: Joi.string().label('Ulica i numer domu').required(),
-        address2: Joi.string().label('Kod pocztowy i adres').required()
+        // nameAndSurname: Joi.string().label('Imię i nazwisko').required(),
+        // address1: Joi.string().label('Ulica i numer domu').required(),
+        // address2: Joi.string().label('Kod pocztowy i adres').required()
     }
 
     populateHoneyKinds() {
@@ -45,27 +45,27 @@ class OrderHoney extends Form {
     }
 
     render() {
-        const chosenHoney = (this.state.data.honeyId)? this.state.honeyKinds[this.state.data.honeyId] : defaultHoney;
+        const chosenHoney = (this.state.data.honeyId) ? this.state.honeyKinds[this.state.data.honeyId] : defaultHoney;
 
         return (
             <Layout>
-                <div className="presentional">
+                <div className="orderHoney">
                     <Card {...chosenHoney}/>
-                </div>
-                <div className='select-form'>
-                    <h1>Zamów miód</h1>
-                    <form onSubmit={this.handleSubmit}>
+                    <div className='orderHoney__select-form'>
+                        <h1>Zamów miód</h1>
+                        <form onSubmit={this.handleSubmit}>
 
-                        {this.renderSelect('honeyId', 'Rodzaj miodu', this.state.honeyKinds)}
-                        {this.renderSelect('sizeId', 'Wielkośc', this.state.sizeKinds)}
-                        {this.renderInput('amount', 'Ilość')}
-                        {this.renderButton('Dodaj')}
+                            {this.renderSelect('honeyId', 'Rodzaj miodu', this.state.honeyKinds)}
+                            {this.renderSelect('sizeId', 'Wielkośc', this.state.sizeKinds)}
+                            {this.renderInput('amount', 'Ilość')}
+                            {this.renderButton('Dodaj')}
 
-                        {/*{this.renderInput('nameAndSurname', 'Imię i nazwisko')}*/}
-                        {/*{this.renderInput('address1', 'Ulica, numer domu/mieszkania')}*/}
-                        {/*{this.renderInput('address2', 'Miasto, kod pocztowy')}*/}
-                        {/*{this.renderButton('Zamów')}*/}
-                    </form>
+                            {/*{this.renderInput('nameAndSurname', 'Imię i nazwisko')}*/}
+                            {/*{this.renderInput('address1', 'Ulica, numer domu/mieszkania')}*/}
+                            {/*{this.renderInput('address2', 'Miasto, kod pocztowy')}*/}
+                            {/*{this.renderButton('Zamów')}*/}
+                        </form>
+                    </div>
                 </div>
             </Layout>
         );

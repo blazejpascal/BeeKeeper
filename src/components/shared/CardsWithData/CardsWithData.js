@@ -12,7 +12,7 @@ const CardsWithData = (props) => {
         <div className="cards-with-data">
             {
             data.map(card => (
-                <Link to={card.to}>
+                <Link key={card.id} to={card.to}>
                 <div key={card.id} className='card-container'>
                   <Card {...card}  />
                 </div>
