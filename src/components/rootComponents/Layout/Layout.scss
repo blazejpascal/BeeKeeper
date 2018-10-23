@@ -1,8 +1,8 @@
 .layout {
   display: grid;
   min-height: 100vh;
-  grid-template-rows: 0.75fr auto 0.5fr;
-  margin: 0 10%;
+  grid-template-rows: 0.5fr auto 0.5fr;
+
 
   &__content {
     display: flex;
@@ -11,9 +11,52 @@
     min-height: 60vh;
     height: 100%;
 
-   background-color: #f8f8f8;
+    background-color: #f8f8f8;
 
   }
 
+}
 
+@media (min-width:360px) {
+
+  .layout {
+    margin: 0 10%;
+  }
+
+}
+
+blockquote {
+  font-family: Georgia, serif;
+  position: relative;
+  margin: 1em;
+  padding: 2em 2em 0.5em 3em;
+  color: #545454;
+}
+blockquote:before {
+  font-family: Georgia, serif;
+  position: absolute;
+  font-size: 6em;
+  line-height: 1;
+  top: 0;
+  left: 0;
+  content: "\201C";
+}
+blockquote:after {
+  font-family: Georgia, serif;
+  position: absolute;
+  float:right;
+  font-size:6em;
+  line-height: 1;
+  right:0;
+  bottom:-0.5em;
+  content: "\201D";
+}
+blockquote footer {
+  padding: 1em 2em 0 0;
+  display: flex;
+  justify-content: flex-end;
+
+}
+blockquote cite:before {
+  content: "\2013";
 }

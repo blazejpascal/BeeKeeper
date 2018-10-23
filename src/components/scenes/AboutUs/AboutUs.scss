@@ -1,0 +1,12 @@
+
+.aboutUs {
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__mainSentence {
+    max-width: 40rem;
+
+  }
+}

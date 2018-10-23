@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import Layout from '../../rootComponents/Layout/Layout'
 import CardsWithData from "../../shared/CardsWithData/CardsWithData";
 
+import './AboutUs.scss'
+
 const description = [
     {
         id: 1,
@@ -26,14 +28,30 @@ const description = [
     },
 ]
 
-class MyComponent extends Component {
+class AboutUs extends Component {
     render() {
         return (
             <Layout>
-                <CardsWithData data={description}  />
+                <div className="aboutUs">
+                    <div className="aboutUs__mainSentence">
+                        <blockquote>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lacinia metus ac nibh
+                            maximus dictum. Ut ligula lorem, sodales sed massa in, feugiat luctus velit. Nunc nec libero
+                            at lectus vestibulum molestie eget mollis lorem. Integer blandit purus eget tempor
+                            imperdiet. Donec eu est gravida, gravida ipsum in, tincidunt dolor.
+
+                        <footer>
+                            <cite>
+                                Rękodzielo Izerskie
+                            </cite>
+                        </footer>
+                        </blockquote>
+                    </div>
+                    <CardsWithData data={description}/>
+                </div>
             </Layout>
         );
     }
 }
 
-export default MyComponent;
+export default AboutUs;
