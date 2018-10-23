@@ -53,8 +53,9 @@ class Form extends Component {
 
     renderButton(label) {
         return (
-
-            <button disabled={this.validate()} className="btn btn-primary"> {label}</button>
+            <div className="button-container">
+                <button disabled={this.validate()} className="btn"> {label}</button>
+            </div>
         )
     }
 
@@ -89,7 +90,7 @@ class Form extends Component {
                 label={label}
                 onChange={this.handleChange}
                 value={data[name]}
-                />
+            />
         )
 
     }

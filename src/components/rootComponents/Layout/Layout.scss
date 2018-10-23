@@ -4,6 +4,10 @@
   grid-template-rows: 0.5fr auto 0.5fr;
 
 
+  @media (min-width:540px) {
+    margin: 0 10%;
+  }
+
   &__content {
     display: flex;
     align-items: center;
@@ -12,18 +16,10 @@
     height: 100%;
 
     background-color: #f8f8f8;
-
   }
 
 }
 
-@media (min-width:360px) {
-
-  .layout {
-    margin: 0 10%;
-  }
-
-}
 
 blockquote {
   font-family: Georgia, serif;

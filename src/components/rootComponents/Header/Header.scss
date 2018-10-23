@@ -6,14 +6,19 @@
   min-height: 250px;
 
   &__logo {
-    width: 20rem;
-    justify-self: start;
+    width: 15rem;
+    justify-self: center;
     align-self: center;
-    padding-left: 40px;
+
+
+    @media (min-width:360px) {
+      width: 20rem;
+      justify-self: start;
+      align-self: center;
+      padding-left: 40px;
+    }
+
+
   }
 }
 
-@media (min-width:360px) {
-
-
-}

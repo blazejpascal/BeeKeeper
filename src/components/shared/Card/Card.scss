@@ -1,11 +1,30 @@
 .square {
   display: grid;
   grid-template-rows: 60% 40%;
-  width: 400px;
-  height: 440px;
+  width: 300px;
+  height: 330px;
   border: 1px solid #e6e6e6;
   margin: 40px 20px;
   box-sizing: border-box;
+
+  &--with-smaller-margin {
+    margin: 20px;
+  }
+
+  @media (min-width: 361px) {
+    width: 330px;
+    height: 363px;
+  }
+
+  @media (min-width: 414px) {
+    width: 360px;
+    height: 396px;
+  }
+
+  @media (min-width: 1700px) {
+    width: 400px;
+    height: 440px;
+  }
 
   &__cover {
     overflow:hidden;
@@ -21,15 +40,24 @@
     justify-content: center;
     align-items: center;
     color: #545454;
-    padding: 0 24px;
-    font-size: 18px;
+    padding: 0 18px;
+    font-size: 14px;
     background-color: #fff;
     font-weight: bold;
 
+    @media (min-width: 361px) {
+      padding: 0 24px;
+      font-size: 16px;
+    }
+
     &--smaller {
       margin-top: 20px;
-      font-size: 14px;
+      font-size: 12px;
       font-weight: normal;
+
+      @media (min-width: 361px) {
+        font-size: 14px;
+      }
     }
   }
 

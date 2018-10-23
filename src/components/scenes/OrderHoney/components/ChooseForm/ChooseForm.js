@@ -11,7 +11,6 @@ class ChooseForm extends Form {
                 {this.renderSelect('sizeId', 'Wielkośc', {sizeKinds})}
                 {this.renderInput('amount', 'Ilość')}
                 {this.renderButton('Dodaj')}
-
             </form>
         );
     }

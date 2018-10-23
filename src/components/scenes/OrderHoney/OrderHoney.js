@@ -51,7 +51,7 @@ class OrderHoney extends Form {
         return (
             <Layout>
                 <div className="orderHoney">
-                    <Card {...chosenHoney}/>
+                    <Card {...chosenHoney} additionalStyling="square--with-smaller-margin"/>
                     <div className='orderHoney__select-form'>
                         <h1>Zamów miód</h1>
                         <form onSubmit={this.handleSubmit}>
