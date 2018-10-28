@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import Layout from '../../rootComponents/Layout/Layout'
 import CardsWithData from "../../shared/CardsWithData/CardsWithData";
 
@@ -28,7 +28,7 @@ const description = [
     },
 ]
 
-class AboutUs extends Component {
+class AboutUs extends React.Component {
     render() {
         return (
             <Layout>

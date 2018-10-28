@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import {getHoningKinds, getSizeKinds, defaultHoney} from "../../../services/honeyService";
 import Form from '../../shared/Form/Form'
 import Layout from '../../rootComponents/Layout/Layout'
