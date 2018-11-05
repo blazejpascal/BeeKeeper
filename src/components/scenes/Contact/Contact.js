@@ -3,6 +3,7 @@ import Layout from '../../rootComponents/Layout/Layout'
 import Form from '../../shared/Form/Form'
 import Joi from "joi-browser";
 import Card from "../../shared/Card/Card";
+import MyMapComponent from "../../shared/GoogleMaps/GoogleMaps";
 
 import './Contacts.scss'
 
@@ -37,6 +38,13 @@ class Contacts extends Form {
         return (
             <Layout>
                 <div className="contacts">
+                    <MyMapComponent
+                      isMarkerShown
+                      googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyDB4UdDABLCaGsD5lt14qi65zVYA1uEhe4&v=3.exp&libraries=geometry,drawing,places"
+                      loadingElement={<div style={{ height: `100%` }} />}
+                      containerElement={<div style={{width: `400px`, height: `400px` }} />}
+                      mapElement={<div style={{ height: `100%` }} />}
+                    />
                     <Card {...description} />
                     <div className="contacts__form">
                         <form onSubmit={this.handleSubmit}>

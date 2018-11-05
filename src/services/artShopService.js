@@ -12,21 +12,21 @@ const artCrafts = [
     {
         id: 1,
         title: 'Miski',
-        url: 'https://picsum.photos/398/265/?random',
+        url: 'https://picsum.photos/398/266/?random',
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pellentesque.",
         to: "/miski"
     },
     {
         id: 2,
         title: 'Moździerze',
-        url: 'https://picsum.photos/398/265/?random',
+        url: 'https://picsum.photos/399/265/?random',
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pellentesque.",
         to: "/mozdzierze"
     },
     {
         id: 3,
         title: 'Anioły',
-        url: 'https://picsum.photos/398/265/?random',
+        url: 'https://picsum.photos/397/265/?random',
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pellentesque.",
         to: "/anioly"
     },
